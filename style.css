@@ -1,0 +1,144 @@
+:root {
+  --clr-primary-softblue: hsl(215, 51%, 70%);
+  --clr-primary-cyan: hsl(178, 100%, 50%);
+
+  --clr-neutral-300: hsl(217, 54%, 11%); /* main bg*/
+  --clr-neutral-400: hsl(216, 50%, 16%); /*card bg*/
+  --clr-neutral-200: hsl(215, 32%, 27%); /*line*/
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --fs-400: 1.125rem;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+  --ff-400: "Outfit", sans-serif;
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  /*  */
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* utility classes */
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+body {
+  background: var(--clr-neutral-300);
+  font-size: var(--fs-400);
+}
+.container {
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* padding: 10rem 1rem; */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 24rem;
+  /* outline: 1px solid red; */
+  font-family: var(--ff-400);
+  color: var(--clr-primary-softblue);
+  background-color: var(--clr-neutral-400);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  line-height: 1.6;
+  font-weight: var(--fw-300);
+}
+.card-title {
+  color: var(--clr-neutral-100);
+  font-size: 1.5rem;
+  font-weight: var(--fw-600);
+}
+.card-title:hover ,.card-title:active {
+cursor: pointer;
+color: var(--clr-primary-cyan);
+}
+.card-image {
+  border-radius: 0.7rem;
+}
+picture {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+}
+.img-frontdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background: var(--clr-primary-cyan);
+}
+
+picture:hover .img-frontdrop{
+  opacity: 0.5;
+  cursor: pointer;
+  
+}
+
+.card-info {
+  justify-content: space-between;
+}
+.value {
+  color: var(--clr-primary-cyan);
+  font-weight: var(--fw-600);
+}
+.time-left {
+  font-weight: var(--fw-400);
+}
+.line {
+  border: 0.01px solid var(--clr-neutral-200);
+}
+.avatar {
+  width: 12%;
+  outline: 1px solid var(--clr-neutral-100);
+  border-radius: 100%;
+}
+
+.footer {
+  gap: 1rem;
+}
+.author-name {
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-400);
+}
+.author-name:hover , .author-name:active{
+  color: var(--clr-primary-cyan);cursor: pointer;
+}
